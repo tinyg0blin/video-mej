@@ -62,7 +62,7 @@ class Ligne(Scene):
         self.play(ShowCreation(rectanglee), Write(formula), Write(Text('Relation de Pascal', color=BLUE).scale(0.6).next_to(rectanglee, direction=UP, aligned_edge=UP)))
         
         item2 = Circle(radius = 0.05, color = DARK_GRAY, fill_opacity=1).move_to([-6.5,-1.1,0])
-        conclu = Tex('Il est alors facile de montrer que\nle nombre de chemins de l\'origine\nau point d\'abscisse $x$ après $t$ pas\nest :', stroke_width=0.5, color=GRAY).scale(0.4).next_to(rectanglee, direction=DOWN, aligned_edge=DOWN).shift(DOWN*3/4).align_to(expl, LEFT, alignment_vect=LEFT)
+        conclu = Text('Il est alors facile de montrer que\nle nombre de chemins de l\'origine\nau point d\'abscisse x après t pas\nest :', stroke_width=0.5, color=GRAY).scale(0.4).next_to(rectanglee, direction=DOWN, aligned_edge=DOWN).shift(DOWN*3/4).align_to(expl, LEFT, alignment_vect=LEFT)
         
         self.play(FadeIn(item2), Write(conclu, run_time=1))
 
