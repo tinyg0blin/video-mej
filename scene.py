@@ -90,5 +90,6 @@ class Prob(Scene):
         prob = MathTex('p(x=k)={t\choose \\frac{k+t}{2}} \\times \\frac{1}{2^t}')
         box = SurroundingRectangle(prob, color=BLUE)
         conditions = Tex('avec $\lvert k \\rvert \leq t$ et $k$ et $t$ de même parité', color=GRAY).scale(0.7).next_to(box, direction=UP)
-        self.play(Write(prob), Write(chart), ShowCreation(box), Write(conditions))
+        binom = Tex('On peut démontrer le même résultat\\\\avec la loi binomiale.', color = GREY).scale(0.5).to_corner(UP+RIGHT)
+        self.play(Write(prob), Write(chart), ShowCreation(box), Write(conditions), FadeIn(binom))
         self.wait(5)
